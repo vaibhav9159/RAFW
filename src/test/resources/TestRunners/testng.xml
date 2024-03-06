@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="API Suite" thread-count="2" parallel="tests">
+
+  <test  name="get gorest">
+	  <parameter name="baseURI" value="https://gorest.co.in"></parameter>
+    <classes>
+      <class name="com.qa.gorest.tests.getUserTestTest"/>
+    </classes>
+  </test> 
+  
+  
+<!--   <test  name="create gorest">-->
+<!--	  <parameter name="baseURI" value="https://gorest.co.in"></parameter>-->
+<!--    <classes>-->
+<!--      <class name="com.qa.gorest.tests.createUserTest"/>-->
+<!--    </classes>-->
+<!--  </test>  Test   -->
+  
+
+  
+<!--   <test  name="circuit test">-->
+<!--	  <parameter name="baseURI" value="http://ergast.com"></parameter>-->
+<!--    <classes>-->
+<!--      <class name="com.qa.gorest.tests.CircuitTest"/>-->
+<!--    </classes>-->
+<!--  </test>  Test -->
+  
+  
+  
+  
+</suite> <!-- Suite -->
