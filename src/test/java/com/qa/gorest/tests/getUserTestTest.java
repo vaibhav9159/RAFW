@@ -49,7 +49,7 @@ public class getUserTestTest extends BaseTest{
 
   @Test(priority=2)
   public void getSingleUserTestTest() {
-	  restClient.get(GOREST_SERVICE_URL+"6755679", true,true).then().assertThat().statusCode(APIHttpStatus.OK_200.getCode()).log().all();
+	  restClient.get(GOREST_SERVICE_URL+"6772739", true,true).then().assertThat().statusCode(APIHttpStatus.OK_200.getCode()).log().all();
   }
 
   @Test(priority=1)
