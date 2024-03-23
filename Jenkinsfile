@@ -20,7 +20,7 @@ pipeline
             steps
             {
                  git 'https://github.com/jglick/simple-maven-project-with-tests.git'
-                 bat "mvn -Dmaven.test.failure.ignore=true clean package"
+                 sh "mvn -Dmaven.test.failure.ignore=true clean package"
             }
             post 
             {
@@ -54,14 +54,14 @@ pipeline
                 /bin/bash -c "mvn test -Dsurefire.suiteXmlFiles=${suiteXmlFilePath}"
             """
             
-            def exitCode = bat(script: dockerCommand, returnStatus: true)
+            def exitCode = sh(script: dockerCommand, returnStatus: true)
             
             if (exitCode != 0) {
                 currentBuild.result = 'FAILURE'
             }
-            bat "docker start apitesting${BUILD_NUMBER}"
-            bat "docker cp apitesting${BUILD_NUMBER}:/app/target/APIExecutionReport.html ${WORKSPACE}/target"
-            bat "docker rm -f apitesting${BUILD_NUMBER}"
+            sh "docker start apitesting${BUILD_NUMBER}"
+            sh "docker cp apitesting${BUILD_NUMBER}:/app/target/APIExecutionReport.html ${WORKSPACE}/target"
+            sh "docker rm -f apitesting${BUILD_NUMBER}"
         }
     }
 }
