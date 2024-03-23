@@ -103,7 +103,8 @@
     <configuration>
         <forkCount>3</forkCount>
         <reuseForks>true</reuseForks>
-       <suiteXmlFiles>src/test/resources/TestRunners/testng.xml</suiteXmlFiles>
+  <!--      <suiteXmlFiles>src/test/resources/TestRunners/testng.xml</suiteXmlFiles> -->
+       <suiteXmlFiles>${suiteXmlFile}</suiteXmlFiles>
     </configuration>
   </plugin>
   
