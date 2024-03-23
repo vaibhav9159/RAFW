@@ -22,7 +22,7 @@ public class BaseTest {
 	public static final String CIRCUITS_SERVICE_URL = "/api/f1";
 	
 	@Parameters({"baseURI"})
-	@BeforeTest()
+	@BeforeTest
 	public void setUp(String baseURI)
 	{
 		RestAssured.filters(new AllureRestAssured());
