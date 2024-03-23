@@ -33,7 +33,12 @@
     </classes>
   	</test>   
   
-  
+  	<test  name="scheme test">
+  <parameter name="baseURI" value="https://gorest.co.in"></parameter>
+    <classes>
+      <class name="com.qa.gorest.tests.APISchemaValidationTest"/>
+    </classes>
+  	</test> 
   
   
 </suite> <!-- Suite -->
