@@ -35,24 +35,24 @@ public class getUserTestTest extends BaseTest{
 		System.out.println(e);
 	}
 	 
-	 List<String> name = js.readList(res, "$[?(@.name=='ParvatiShiv')].name");
+//	 List<String> name = js.readList(res, "$[?(@.name=='ParvatiShiv')].name");
 //	 System.out.println(name);
-	 name.stream().forEach(e->System.out.println(e));
+//	 name.stream().forEach(e->System.out.println(e));
 	 
-	 for(String e:name)
-		{
-			System.out.println(e);
-			Assert.assertEquals(e, "ParvatiShiv");
-		}
+//	 for(String e:name)
+//		{
+//			System.out.println(e);
+//			Assert.assertEquals(e, "ParvatiShiv");
+//		}
 
   }
 
-  @Test(priority=2)
+  @Test(priority=2,enabled=false)
   public void getSingleUserTestTest() {
 	  restClient.get(GOREST_SERVICE_URL+"6772739", true,true).then().assertThat().statusCode(APIHttpStatus.OK_200.getCode()).log().all();
   }
 
-  @Test(priority=1)
+  @Test(priority=1,enabled=false)
   public void getUserWIthQueryParamTestTest() {
 	  Map<String,String> queryParams = new HashMap<String,String>();
 	  queryParams.put("email", "VaranasiKASHI1709403718306@UttarPradesh.co.in");

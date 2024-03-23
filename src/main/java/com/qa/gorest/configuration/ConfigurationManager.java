@@ -16,7 +16,7 @@ public class ConfigurationManager {
 	{
 		prop = new Properties();
 		/// maven --> , pass multi env values
-			
+	
 		String envName= System.getProperty("env"); // getprop method  will the read the cmd arg line value 
 		System.out.println("Running tests on env " + envName);
 		
@@ -25,25 +25,24 @@ public class ConfigurationManager {
 		if(envName==null)
 		{
 			System.out.println("running tests on default QA env");
-			fis = new FileInputStream("src/test/resources/config/qa.config.properties");
+			fis = new FileInputStream("./src/test/resources/config/qa.config.properties");
 		}
 		else {System.out.println("running tests on env " + envName);
 		
 		
 				switch(envName.toLowerCase().trim()) {
 				
-				case "qa": fis = new FileInputStream("src/test/resources/config/qa.config.properties");
+				case "qa": fis = new FileInputStream("./src/test/resources/config/qa.config.properties");
 					break;
-				case "dev":	fis = new FileInputStream("src/test/resources/config/dev.config.properties");
+				case "dev":	fis = new FileInputStream("./src/test/resources/config/dev.config.properties");
 					break;
-				case "prod": fis = new FileInputStream("src/test/resources/config/prod.config.properties");
+				case "prod": fis = new FileInputStream("./src/test/resources/config/prod.config.properties");
 					break;
 					
 					default:
 						System.out.println("plz pass right env " + envName);
 						throw new APIFrameWorkException("Invalid env value customized exception");
 				}
-		
 		}
 		
 		}

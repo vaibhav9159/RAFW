@@ -33,7 +33,6 @@ public class CircuitTest extends BaseTest {
 		 Assert.assertEquals(singlecountry, "Russia");
 		 Assert.assertEquals(statuscode, APIHttpStatus.OK_200.getCode());
 		  
-		  
 	  }
 
 }
