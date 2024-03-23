@@ -16,29 +16,22 @@
     </classes>
   </test> 
   
+  
    <test  name="create gorest">
  	  <parameter name="baseURI" value="https://gorest.co.in"></parameter> 
     <classes>
       <class name="com.qa.gorest.tests.createUserTest"/>
     </classes>
   </test> 
-  
-  
-<!--   <test  name="create gorest">-->
-<!--	  <parameter name="baseURI" value="https://gorest.co.in"></parameter>-->
-<!--    <classes>-->
-<!--      <class name="com.qa.gorest.tests.createUserTest"/>-->
-<!--    </classes>-->
-<!--  </test>  Test   -->
-  
 
+ 
   
-<!--   <test  name="circuit test">-->
-<!--	  <parameter name="baseURI" value="http://ergast.com"></parameter>-->
-<!--    <classes>-->
-<!--      <class name="com.qa.gorest.tests.CircuitTest"/>-->
-<!--    </classes>-->
-<!--  </test>  Test -->
+  	<test  name="circuit test">
+  <parameter name="baseURI" value="http://ergast.com"></parameter>
+    <classes>
+      <class name="com.qa.gorest.tests.CircuitTest"/>
+    </classes>
+  	</test>   
   
   
   
